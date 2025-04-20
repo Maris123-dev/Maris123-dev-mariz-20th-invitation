@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mariz's Envelope</title>
+  <link rel="stylesheet" href="envelope.css" />
+</head>
+<body>
+  <div class="envelope-container" onclick="openEnvelope()">
+    <div class="envelope">
+      <div class="flap"></div>
+      <div class="body">
+        <div class="stamp">❤️</div>
+      </div>
+    </div>
+    <p class="click-message">Click to open 💌</p>
+  </div>
+
+  <script>
+    function openEnvelope() {
+      const flap = document.querySelector('.flap');
+
+      // Set flag to trigger music on next page
+      sessionStorage.setItem("playMusic", "true");
+
+      flap.classList.add('open-flap');
+
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 1600);
+    }
+  </script>
+</body>
+</html>

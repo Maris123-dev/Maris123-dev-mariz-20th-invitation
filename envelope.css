@@ -1,0 +1,110 @@
+/* Basic setup */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #ffe6ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Container */
+  .envelope-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .envelope-container:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Envelope body */
+  .envelope {
+    width: 260px;
+    height: 180px;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  /* Envelope bottom part */
+  .body {
+    width: 100%;
+    height: 100%;
+    background: #ffb6c1;
+    border: 2px solid #e88ca3;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+  
+  /* Flap (top triangle) */
+  .flap {
+    width: 0;
+    height: 0;
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    border-bottom: 90px solid #ffb6c1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    z-index: 2;
+    transition: transform 1.2s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  /* Flap open animation */
+  .open-flap {
+    animation: openEnvelopeFlap 1.5s forwards ease-in-out;
+    transform-origin: bottom center;
+  }
+
+  /* Heart stamp */
+  .stamp {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    background: #fff0f5;
+    padding: 6px 10px;
+    border-radius: 50%;
+    border: 2px solid #e88ca3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Click message */
+  .click-message {
+    margin-top: 15px;
+    color: #c94f7c;
+    font-size: 1rem;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes openEnvelopeFlap {
+    0% {
+      transform: rotateX(0deg);
+    }
+    60% {
+      transform: rotateX(-120deg);
+    }
+    80% {
+      transform: rotateX(-100deg);
+    }
+    100% {
+      transform: rotateX(-110deg);
+    }
+    }
+  /* Pulse animation */
+  @keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
