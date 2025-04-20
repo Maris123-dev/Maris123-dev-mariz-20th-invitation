@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mariz's 20th Birthday Invitation</title>
+  <link rel="stylesheet" href="invitation.css" />
+</head>
+<body>
+  <!-- Invitation Content Section -->
+  <div class="invitation-content">
+    <div class="invitation-card">
+      <header class="floral-header">
+        <div class="centered-message">
+          <h1>Mariz Turns 20!</h1>
+          <p class="tagline">Your lovely girlfriend wants you to be there for her on her special day. 🎉</p>
+        </div>
+      </header>
+
+      <section class="invitation-details">
+        <h1 class="invitation-title">You're Invited!</h1>
+        <div class="invitation-text">
+          <p><strong>When:</strong> April 30, 2025 | 7:00 AM</p>
+          <p><strong>Where to pick up her?</strong> AT Junterial Residence, Meet the parents first.</p>
+          <p><strong>Where:</strong> Around Manila</p>
+          <p><strong>Theme Color:</strong> Red & Black</p>
+        </div>
+        <p class="message">Join Mariz for an unforgettable celebration filled with laughter, love, and unforgettable memories.🌸</p>
+      </section>
+
+      <!-- Mariz's Picture -->
+      <section class="mariz-photo-container">
+        <img src="static/mariz.jpg" alt="Mariz's Picture" class="mariz-photo" />
+      </section>
+
+      <!-- Itinerary -->
+      <section class="itinerary-section">
+        <h2 class="itinerary-title">🌸 Birthday Itinerary 🌸</h2>
+
+        <div class="itinerary-card">
+          <img src="static/dinner.jpg" alt="Dinner" />
+          <div class="info">
+            <h3>Dinner</h3>
+            <p>A birthday celebration at Vikings with a famous worldwide buffet dish</p>
+          </div>
+        </div>
+
+        <div class="itinerary-card">
+          <img src="static/intramuros.jpg" alt="Intramuros" />
+          <div class="info">
+            <h3>Intramuros Walk</h3>
+            <p>Exploring and having adventures while strolling around Intramuros’ charming colonial streets.</p>
+          </div>
+        </div>
+
+        <div class="itinerary-card">
+          <img src="static/museum.jpg" alt="Museum" />
+          <div class="info">
+            <h3>Museum Visit</h3>
+            <p>A relaxing stop at the museum to appreciate art and culture with your loveyy.</p>
+          </div>
+        </div>
+
+        <div class="itinerary-card">
+          <img src="static/iceskating.jpg" alt="Ice Skating" />
+          <div class="info">
+            <h3>Ice Skating</h3>
+            <p>A once-in-a-lifetime experience for both of us 💞</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP -->
+      <section class="rsvp-section">
+        <h2>Are you joining the celebration?</h2>
+        <div class="rsvp-buttons">
+          <button id="yesBtn">Yes</button>
+          <button id="noBtn">No</button>
+        </div>
+        <p id="rsvpMessage" class="rsvp-message"></p>
+      </section>
+
+      <footer>
+        <p class="footer-text">Let’s celebrate Mariz’s 20th in style! 💐</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const msg = document.getElementById('rsvpMessage');
+
+    yesBtn.onclick = () => {
+      msg.textContent = "Aww, yay! Can't wait to party with you 💖🎂";
+      msg.style.color = "#ff66b2";
+    };
+
+    noBtn.onclick = () => {
+      msg.textContent = "No is not an option 😘 You're still coming. Cake awaits!";
+      msg.style.color = "#cc4444";
+    };
+  </script>
+</body>
+</html>
